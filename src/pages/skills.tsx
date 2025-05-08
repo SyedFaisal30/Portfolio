@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react"; // Import hooks
 import {
   FaHtml5,
   FaCss3Alt,
@@ -27,7 +28,6 @@ import {
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-// Icon mapping
 const skillIcons = {
   HTML: <FaHtml5 />,
   CSS: <FaCss3Alt />,
@@ -97,6 +97,23 @@ const skills = Object.entries(skillIcons).map(([name, icon]) => ({
 }));
 
 const Skills = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("project-visible");
+        } else {
+          entry.target.classList.remove("project-visible");
+        }
+      });
+    });
+
+    const fadeInElements = document.querySelectorAll(".project-fade");
+    fadeInElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
@@ -111,7 +128,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-gray-700 transition duration-300"
+              className="project-fade flex items-center space-x-3 bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-gray-700 transition duration-300"
             >
               <span className="text-2xl text-blue-400">{skill.icon}</span>
               <span className="text-lg font-medium">{skill.name}</span>
@@ -147,7 +164,10 @@ const Skills = () => {
 
         <div className="space-y-6">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-800 p-5 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="project-fade bg-gray-800 p-5 rounded-lg shadow-md"
+            >
               <h3 className="text-xl font-semibold text-blue-300">
                 {project.name}
               </h3>
@@ -158,8 +178,9 @@ const Skills = () => {
                     className="flex items-center space-x-2 bg-gray-700 px-3 py-2 rounded-md"
                   >
                     <span className="text-blue-400 text-xl">
-                      {skillIcons[tech]}
+                      {skillIcons[tech as keyof typeof skillIcons]}
                     </span>
+
                     <span>{tech}</span>
                   </span>
                 ))}

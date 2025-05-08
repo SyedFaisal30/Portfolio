@@ -7,15 +7,15 @@ const Contact = () => {
     <div className="bg-gray-900 text-white font-sans pt-10 min-h-screen">
       <Header />
 
-      <div className="mt-16 px-4 sm:px-10 space-y-10">
+      <div className="mt-16 px-4 sm:px-10 space-y-10 animate-on-scroll project-fade">
         <h2 className="text-3xl font-bold text-blue-400 text-center">📩 Contact Me</h2>
 
         {/* Contact Form */}
-        <div className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold text-blue-300 mb-4 text-center">Reach Out</h3>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto animate-on-scroll project-fade">
+          <h3 className="text-xl font-semibold text-blue-300 mb-4 text-center animate-on-scroll project-fade">Reach Out</h3>
 
           <form
-            action="mailto:your-email@example.com"
+            action="mailto:sfarz172320@gmail.com"
             method="get"
             encType="text/plain"
             className="space-y-6"
@@ -72,7 +72,7 @@ const Contact = () => {
         </div>
 
         {/* Platform Links with Colored Icons */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-md mt-10">
+        <div className="bg-gray-900 p-6 rounded-lg shadow-md mt-10 animate-on-scroll project-fade">
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://www.linkedin.com/in/syedfaisal30/"
@@ -99,7 +99,7 @@ const Contact = () => {
               <FaWhatsapp className="text-2xl" />
             </a>
             <a
-              href="https://twitter.com/syedfaisal30"
+              href="https://twitter.com/SyedFaisal30"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-blue-500 rounded-lg text-white hover:bg-blue-600 transition duration-300"
@@ -107,7 +107,7 @@ const Contact = () => {
               <FaTwitter className="text-2xl" />
             </a>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:sfarz172320@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-red-500 rounded-lg text-white hover:bg-red-600 transition duration-300"

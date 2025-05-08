@@ -17,16 +17,10 @@ import {
   FaCss3Alt,
   FaGitAlt,
 } from "react-icons/fa"; // Import the relevant icons
-import ResumeModal from "../components/resume";
-import { useState } from "react";
 
 const LandingPage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
   return (
-    <div className="bg-gray-900 text-white font-sans pt-16">
+    <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white pt-16">
       {/* Header Section */}
       <Header />
 
@@ -36,7 +30,7 @@ const LandingPage = () => {
           {/* Profile Section */}
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
             {/* Profile Image */}
-            <div className="w-60 h-80 sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-60 h-80 sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
               <img
                 src="src/assets/Faisal.jpeg"
                 alt="Syed Faisal Abdul Rahman Zulfequar"
@@ -44,7 +38,7 @@ const LandingPage = () => {
               />
             </div>
             {/* Text and Resume Button */}
-            <div className="text-center sm:text-left">
+            <div className="text-center sm:text-left animate-slideInRight">
               <h1 className="text-3xl sm:text-4xl font-bold text-white">
                 Syed Faisal Abdul Rahman Zulfequar
               </h1>
@@ -54,24 +48,24 @@ const LandingPage = () => {
               </p>
 
               {/* Resume Button */}
+              {/* Resume Button */}
               <div className="flex justify-center mt-4">
-                {/* Styled Button */}
-                <button
-                  onClick={openModal}
+                <a
+                  href="src/assets/Syed Faisal.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
                 >
                   View Resume
-                </button>
+                </a>
               </div>
 
-              {/* Resume Modal */}
-              <ResumeModal isOpen={isModalOpen} onClose={closeModal} />
             </div>
           </div>
         </div>
       </div>
       {/* About Me Section */}
-      <div className="text-center py-10 px-4 bg-gray-800 text-white">
+      <div className="text-center py-10 px-4 bg-gray-800 text-white animate-on-scroll project-fade">
         <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400">
           About Me
         </h2>
@@ -120,14 +114,14 @@ const LandingPage = () => {
       </div>
 
       {/* Projects Section */}
-      <div className="py-16 px-4 bg-gray-900 text-white">
+      <div className="mt-8 space-y-6 max-w-4xl mx-auto text-lg text-gray-300 animate-on-scroll project-fade px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl text-center font-semibold text-blue-400">
           Projects
         </h2>
 
-        <div className="mt-8 space-y-6 max-w-4xl mx-auto text-lg text-gray-300">
+        <div className="mt-8 space-y-6 animate-on-scroll project-fade">
           {/* ChefGenie Project */}
-          <div>
+          <div className="animate-on-scroll project-fade">
             <h3 className="text-2xl font-semibold text-white">ChefGenie</h3>
             <p>
               ChefGenie is a dynamic recipe generation platform where users can
@@ -139,7 +133,7 @@ const LandingPage = () => {
           </div>
 
           {/* E-commerce Website Project */}
-          <div>
+          <div className="animate-on-scroll project-fade">
             <h3 className="text-2xl font-semibold text-white">
               E-commerce Website
             </h3>
@@ -153,7 +147,7 @@ const LandingPage = () => {
           </div>
 
           {/* Video Progress Tracker (VPT) Project */}
-          <div>
+          <div className="animate-on-scroll project-fade">
             <h3 className="text-2xl font-semibold text-white">
               Video Progress Tracker (VPT)
             </h3>
@@ -167,7 +161,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 mb-10 text-center">
           <Link to="/projects">
             <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
               View All Projects
@@ -177,11 +171,11 @@ const LandingPage = () => {
       </div>
 
       {/* Skills Section */}
-      <div className="py-16 px-4 bg-gray-800 text-white">
+      <div className="py-16 px-4 bg-gray-800 text-white animate-on-scroll project-fade">
         <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400 text-center">
           Skills
         </h2>
-        <p className="text-center mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+        <p className="text-center mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate-on-scroll project-fade">
           These are the core technologies I use in my projects. You can explore
           more skills in detail on the
           <Link to="/skills" className="text-blue-400 underline ml-1">
@@ -190,9 +184,9 @@ const LandingPage = () => {
           .
         </p>
 
-        <div className="flex flex-wrap justify-center mt-8 gap-8">
+        <div className="flex flex-wrap justify-center mt-8 gap-8 animate-on-scroll project-fade">
           {/* Skill with Icon */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
             <FaReact className="text-4xl text-blue-500" />
             <p className="mt-2 text-sm">React</p>
           </div>
@@ -229,9 +223,9 @@ const LandingPage = () => {
         </div>
 
         {/* Button to redirect to the Skills page */}
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center animate-on-scroll project-fade">
           <Link to="/skills">
-            <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
+            <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 shadow-md">
               View All Skills
             </button>
           </Link>
@@ -239,13 +233,13 @@ const LandingPage = () => {
       </div>
 
       {/* Connect Section (Social Icons) */}
-      <div className="py-10 px-4 bg-gray-900 text-center">
+      <div className="py-10 px-4 bg-gray-900 text-center animate-on-scroll project-fade">
         <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400">
           Connect With Me
         </h2>
         <div className="flex justify-center space-x-6 mt-6">
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/syedfaisal30"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-3xl"
@@ -253,7 +247,7 @@ const LandingPage = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/syedfaisal30"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-3xl"
@@ -261,7 +255,7 @@ const LandingPage = () => {
             <FaGithub />
           </a>
           <a
-            href="https://wa.me/your-number"
+            href="https://wa.me/9892996342"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 text-3xl"
@@ -269,7 +263,7 @@ const LandingPage = () => {
             <FaWhatsapp />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/SyedFaisal30"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 text-3xl"
@@ -277,7 +271,7 @@ const LandingPage = () => {
             <FaTwitter />
           </a>
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:sfarz172320@gmail.com"
             className="text-gray-600 text-3xl"
           >
             <FaEnvelope />

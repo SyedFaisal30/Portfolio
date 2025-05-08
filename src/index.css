@@ -1,1 +1,97 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+
+  @keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0 }
+    to { transform: translateX(0); opacity: 1 }
+  }
+
+  @keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0 }
+    to { transform: translateX(0); opacity: 1 }
+  }
+
+  /* Scroll Up & Down Fade Up Animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-on-scroll {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    will-change: opacity, transform;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.project-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.project-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
