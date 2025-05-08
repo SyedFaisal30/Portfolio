@@ -18,7 +18,7 @@ import {
   FaGitAlt,
 } from "react-icons/fa"; 
 import Faisal from "../assets/Faisal.jpeg";
-
+import SyedFaisal from "../assets/Syed Faisal.pdf";
 const LandingPage = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white pt-16">
@@ -52,7 +52,7 @@ const LandingPage = () => {
               {/* Resume Button */}
               <div className="flex justify-center mt-4">
                 <a
-                  href="src/assets/Syed Faisal.pdf"
+                  href={SyedFaisal}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
