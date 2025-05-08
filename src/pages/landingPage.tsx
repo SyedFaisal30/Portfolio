@@ -16,7 +16,8 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-} from "react-icons/fa"; // Import the relevant icons
+} from "react-icons/fa"; 
+import Faisal from "../assets/Faisal.jpeg";
 
 const LandingPage = () => {
   return (
@@ -32,7 +33,7 @@ const LandingPage = () => {
             {/* Profile Image */}
             <div className="w-60 h-80 sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
               <img
-                src="src/assets/Faisal.jpeg"
+                src={Faisal}
                 alt="Syed Faisal Abdul Rahman Zulfequar"
                 className="w-full h-full object-cover rounded-lg"
               />
