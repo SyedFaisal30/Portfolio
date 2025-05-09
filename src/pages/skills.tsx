@@ -121,7 +121,7 @@ const Skills = () => {
       <div className="px-6 sm:px-10 py-10 space-y-10">
         {/* All Skills Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-blue-400">🛠️ All My Skills</h2>
+          <h2 className="text-3xl text-center font-bold text-blue-400">My Skills</h2>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">

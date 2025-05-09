@@ -8,7 +8,7 @@ const Contact = () => {
       <Header />
 
       <div className="mt-16 px-4 sm:px-10 space-y-10 animate-on-scroll project-fade">
-        <h2 className="text-3xl font-bold text-blue-400 text-center">📩 Contact Me</h2>
+        <h2 className="text-3xl font-bold text-blue-400 text-center">📩 Contact</h2>
 
         {/* Contact Form */}
         <div className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto animate-on-scroll project-fade">

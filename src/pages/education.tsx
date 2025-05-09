@@ -74,7 +74,7 @@ useEffect(() => {
       <Header />
 
       <div className=" px-4 sm:px-6 md:px-10 py-10 space-y-12">
-        <h2 className="text-3xl font-bold text-blue-400 text-center">🎓 Education Timeline</h2>
+        <h2 className="text-3xl font-bold text-blue-400 text-center">🎓 Education</h2>
 
         <div className="relative animate-on-scroll">
           {/* Vertical Line */}
