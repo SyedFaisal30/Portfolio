@@ -240,7 +240,7 @@ const LandingPage = () => {
         </h2>
         <div className="flex justify-center space-x-6 mt-6">
           <a
-            href="https://linkedin.com/syedfaisal30"
+            href="https://www.linkedin.com/in/syedfaisal30"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-3xl"
