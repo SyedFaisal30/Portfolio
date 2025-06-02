@@ -16,17 +16,18 @@ import videotube from "../assets/videotube.png";
 import ptai from "../assets/ptai.png";
 import resturant from "../assets/resturant.png";
 import counter from "../assets/counter.png";
+import cricaIlytics from "../assets/cricaIlytics.png";
 
 // Add your projects here with image and fullDesc
 const projects = [
   {
-    name: "PTAI",
-    image: ptai,
-    desc: "AI-based fitness app with Next.js.",
+    name: "CricAilytics",
+    image: cricaIlytics,
+    desc: "AI-powered cricket analytics platform.",
     fullDesc:
-      "PTAI (Personal Trainer AI) is a smart fitness web app built using Next.js and Tailwind CSS. It offers personalized workout routines and nutrition plans powered by AI. Users can input preferences and fitness goals to get customized fitness strategies and health tracking.",
-    github: "https://github.com/SyedFaisal30/PTAI",
-    live: "https://ptai.vercel.app/",
+      "CricAilytics is an AI-powered RAG-based platform that provides cricketers informatio like player info, teams, origin, stats, and match data. Built with React, Tailwind CSS-Fontend and FastApi-Backend, it aims to provide intelligent summaries, comparisons, and performance breakdowns for teams and players.",
+    github: "https://github.com/SyedFaisal30/CricAilytics",
+    live: "https://cricailytics.vercel.app/",
   },
   {
     name: "ChefGenie",
@@ -38,6 +39,15 @@ const projects = [
     live: "https://chefgenie.vercel.app/",
   },
   {
+    name: "PTAI",
+    image: ptai,
+    desc: "AI-based fitness app with Next.js.",
+    fullDesc:
+      "PTAI (Personal Trainer AI) is a smart fitness web app built using Next.js and Tailwind CSS. It offers personalized workout routines and nutrition plans powered by AI. Users can input preferences and fitness goals to get customized fitness strategies and health tracking.",
+    github: "https://github.com/SyedFaisal30/PTAI",
+    live: "https://ptai.vercel.app/",
+  },
+  {
     name: "FastPiks",
     image: fastpiks,
     desc: "Next.js e-commerce platform.",
@@ -47,14 +57,6 @@ const projects = [
     live: "https://fastpiks.vercel.app/",
   },
   {
-    name: "RestReview",
-    image: restreview,
-    desc: "Restaurant review platform.",
-    fullDesc:
-      "RestReview enables restaurant owners to manage customer reviews with ease. It supports Google OAuth login, review posting, and responses. Built with the MERN stack and Passport.js, the app also ensures secure session handling and clean UI interactions with React and CSS Modules.",
-    github: "https://github.com/SyedFaisal30/RestReview",
-  },
-  {
     name: "VPT",
     image: vptImg,
     desc: "Video progress tracker.",
@@ -62,6 +64,14 @@ const projects = [
       "VPT (Video Progress Tracker) is a responsive MERN stack app that tracks playback of multiple videos on a single page. It uses React hooks and localStorage to remember each video’s progress, ideal for educational content and learning platforms.",
     github: "https://github.com/SyedFaisal30/Video-Progress-Tracker",
     live: "https://videomilestone.vercel.app/",
+  },
+  {
+    name: "RestReview",
+    image: restreview,
+    desc: "Restaurant review platform.",
+    fullDesc:
+      "RestReview enables restaurant owners to manage customer reviews with ease. It supports Google OAuth login, review posting, and responses. Built with the MERN stack and Passport.js, the app also ensures secure session handling and clean UI interactions with React and CSS Modules.",
+    github: "https://github.com/SyedFaisal30/RestReview",
   },
   {
     name: "Mystry Messages",
