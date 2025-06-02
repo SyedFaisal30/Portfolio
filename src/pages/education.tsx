@@ -10,7 +10,7 @@ const Education = () => {
       title: "Kishinchand Chellaram College",
       degree: "B.Sc. in Computer Science",
       description:
-        "Expected Graduation: March 2025 | GPA: 10.0 (1st Sem), 9.9 (2nd Sem), 9.9 (3rd Sem), 9.5 (4th Sem), 9.3 (5th Sem), 9.3 (6th Sem) - 9.7 (CGPA)",
+        "Completed Bachelor of Science in Computer Science Graduation: March 2025 with CGPA 9.7",
       link: "https://kccollege.edu.in/",
     },
     {
