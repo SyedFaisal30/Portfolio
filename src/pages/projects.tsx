@@ -16,13 +16,13 @@ import videotube from "../assets/videotube.png";
 import ptai from "../assets/ptai.png";
 import resturant from "../assets/resturant.png";
 import counter from "../assets/counter.png";
-import cricaIlytics from "../assets/cricaIlytics.png";
+import cricailytics from "../assets/cricailytics.png";
 
 // Add your projects here with image and fullDesc
 const projects = [
   {
     name: "CricAilytics",
-    image: cricaIlytics,
+    image: cricailytics,
     desc: "AI-powered cricket analytics platform.",
     fullDesc:
       "CricAilytics is an AI-powered RAG-based platform that provides cricketers informatio like player info, teams, origin, stats, and match data. Built with React, Tailwind CSS-Fontend and FastApi-Backend, it aims to provide intelligent summaries, comparisons, and performance breakdowns for teams and players.",
