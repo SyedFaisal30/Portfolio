@@ -17,15 +17,25 @@ import ptai from "../assets/ptai.png";
 import resturant from "../assets/resturant.png";
 import counter from "../assets/counter.png";
 import cricailytics from "../assets/cricailytics.png";
+import officeflow from "../assets/officeflow.png";
+import prodview from "../assets/prodview.png";
 
-// Add your projects here with image and fullDesc
+type Project = {
+  name: string;
+  image: string;
+  desc: string;
+  fullDesc: string;
+  github?: string;
+  live?: string;
+};
+
 const projects = [
   {
     name: "CricAilytics",
     image: cricailytics,
     desc: "AI-powered cricket analytics platform.",
     fullDesc:
-      "CricAilytics is an AI-powered RAG-based platform that provides cricketers informatio like player info, teams, origin, stats, and match data. Built with React, Tailwind CSS-Fontend and FastApi-Backend, it aims to provide intelligent summaries, comparisons, and performance breakdowns for teams and players.",
+      "CricAilytics is an AI-powered RAG-based platform that provides cricketers information like player info, teams, origin, stats, and match data. Built with React, Tailwind CSS-Fontend and FastApi-Backend, it aims to provide intelligent summaries, comparisons, and performance breakdowns for teams and players.",
     github: "https://github.com/SyedFaisal30/CricAilytics",
     live: "https://cricailytics.vercel.app/",
   },
@@ -57,6 +67,14 @@ const projects = [
     live: "https://fastpiks.vercel.app/",
   },
   {
+    name: "OfficeFlow",
+    image: officeflow,
+    desc: "Office management system (admin panel).",
+    fullDesc:
+      "OfficeFlow is a full-stack office management system that allows admins to manage departments and employees. Built with Node.js, Express, MongoDB (backend), and React + Tailwind (frontend), it features JWT-based login, country/state/city API integration, pagination, filtering, and relationship management.",
+    github: "https://github.com/SyedFaisal30/OfficeFlow",
+  },
+  {
     name: "VPT",
     image: vptImg,
     desc: "Video progress tracker.",
@@ -64,6 +82,15 @@ const projects = [
       "VPT (Video Progress Tracker) is a responsive MERN stack app that tracks playback of multiple videos on a single page. It uses React hooks and localStorage to remember each video’s progress, ideal for educational content and learning platforms.",
     github: "https://github.com/SyedFaisal30/Video-Progress-Tracker",
     live: "https://videomilestone.vercel.app/",
+  },
+  {
+    name: "ProdView",
+    image: prodview, 
+    desc: "Product feedback & review platform.",
+    fullDesc:
+      "ProdView is a product feedback and review platform built with MERN stack. It allows users to browse, comment, and rate various products. Includes search, category filters, and admin control for managing products and reviews efficiently.",
+    github: "https://github.com/SyedFaisal30/ProdView", 
+    live: "https://prod-view.vercel.app/",
   },
   {
     name: "RestReview",
@@ -126,34 +153,38 @@ const projects = [
   },
 ];
 
+
 const Projects = () => {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [modalData, setModalData] = useState<any>(null);
+  const [modalData, setModalData] = useState<Project | null>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio === 1) {
-            entry.target.classList.add("project-visible");
-          } else {
-            entry.target.classList.remove("project-visible");
-          }
-        });
-      },
-      { threshold: 1.0 }
-    );
-
-    projectRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      projectRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          entry.target.classList.add("project-visible");
+        } else {
+          entry.target.classList.remove("project-visible");
+        }
       });
-    };
-  }, []);
+    },
+    { threshold: 1.0 }
+  );
+
+  const currentRefs = projectRefs.current;
+
+  currentRefs.forEach((ref) => {
+    if (ref) observer.observe(ref);
+  });
+
+  return () => {
+    currentRefs.forEach((ref) => {
+      if (ref) observer.unobserve(ref);
+    });
+  };
+}, []);
+
 
   return (
     <div className="bg-gray-900 min-h-screen text-white">
