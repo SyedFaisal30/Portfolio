@@ -19,6 +19,7 @@ import counter from "../assets/counter.png";
 import cricailytics from "../assets/cricailytics.png";
 import officeflow from "../assets/officeflow.png";
 import prodview from "../assets/prodview.png";
+import fintrust from "../assets/fintrust.png";
 
 type Project = {
   name: string;
@@ -65,6 +66,15 @@ const projects = [
       "FastPiks is a scalable e-commerce platform built with Next.js, ShadCN UI, and Tailwind CSS. It includes features like user authentication, dynamic product listings, a shopping cart, and a functional checkout system—all optimized for performance and responsiveness.",
     github: "https://github.com/SyedFaisal30/FastPiks",
     live: "https://fastpiks.vercel.app/",
+  },
+  {
+    name: "Fintrust",
+    image: fintrust,
+    desc: "MERN + MySQL-based modern banking system.",
+    fullDesc:
+      "Fintrust is a full-stack banking system built with the MERN stack and MySQL. It features role-based authentication for customers and bankers, JWT auth, email verification via OTP, secure transactions (deposit/withdraw), and customer account summaries. The frontend is styled using Tailwind CSS with a modern banking dashboard interface inspired by real-world finance apps.",
+    github: "https://github.com/SyedFaisal30/Fintrust",
+    live: "https://fin-trust.vercel.app/",
   },
   {
     name: "OfficeFlow",
