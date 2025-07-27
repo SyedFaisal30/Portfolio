@@ -8,13 +8,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import {
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaJs,
-  FaGitAlt,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDatabase, FaJs, FaGitAlt } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { TbBrain } from "react-icons/tb";
 import Faisal from "../assets/Faisal.jpeg";
@@ -27,42 +21,43 @@ const LandingPage = () => {
 
       {/* Profile Section */}
       <div className="flex items-center justify-center py-10 px-2 md:px-16 bg-gray-900 text-white">
-  <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto space-y-6 sm:space-y-0">
-    {/* Profile Section */}
-    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 w-full">
-      {/* Profile Image */}
-      <div className="w-60 h-80 sm:w-48 sm:h-48 lg:w-[20%] lg:h-[30%] rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
-        <img
-          src={Faisal}
-          alt="Syed Faisal Abdul Rahman Zulfequar"
-          className="w-full h-[40vh] object-cover rounded-lg"
-        />
-      </div>
+        <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto space-y-6 sm:space-y-0">
+          {/* Profile Section */}
+          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 w-full">
+            {/* Profile Image */}
+            <div className="w-60 h-80 sm:w-48 sm:h-48 lg:w-[20%] lg:h-[30%] rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
+              <img
+                src={Faisal}
+                alt="Syed Faisal Abdul Rahman Zulfequar"
+                className="w-full h-[50vh] lg:h-[40vh] object-cover rounded-lg"
+              />
+            </div>
 
-      {/* Text and Resume Button */}
-      <div className="text-center sm:text-left animate-slideInRight lg:w-[70%]">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white">
-          Syed Faisal Abdul Rahman Zulfequar
-        </h1>
-        <p className="text-xl sm:text-2xl mt-2 text-gray-300">
-          Full Stack Developer | RAG Application Developer | 10+ Projects | 25+ Technologies | 2+ Years Experience
-        </p>
+            {/* Text and Resume Button */}
+            <div className="text-center sm:text-left animate-slideInRight lg:w-[70%]">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white">
+                Syed Faisal Abdul Rahman Zulfequar
+              </h1>
+              <p className="text-xl sm:text-2xl mt-2 text-gray-300">
+                Full Stack Developer | RAG Application Developer | 10+ Projects
+                | 25+ Technologies | 2+ Years Experience
+              </p>
 
-        {/* Resume Button */}
-        <div className="flex justify-center sm:justify-start mt-4">
-          <a
-            href={SyedFaisal}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
-          >
-            View Resume
-          </a>
+              {/* Resume Button */}
+              <div className="flex justify-center sm:justify-start mt-4">
+                <a
+                  href={SyedFaisal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+                >
+                  View Resume
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* About Me Section */}
       <div className="text-center py-10 px-4 bg-gray-800 text-white animate-on-scroll project-fade">
@@ -89,7 +84,10 @@ const LandingPage = () => {
           <br />
           <br />
           Skilled in the{" "}
-          <span className="text-white font-semibold">Full stack development </span> and over{" "}
+          <span className="text-white font-semibold">
+            Full stack development{" "}
+          </span>{" "}
+          and over{" "}
           <span className="text-white font-semibold">25 technologies</span> like{" "}
           <span className="text-white font-semibold">
             TypeScript, Next.js, Docker
