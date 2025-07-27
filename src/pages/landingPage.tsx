@@ -5,7 +5,7 @@ import {
   FaWhatsapp,
   FaTwitter,
   FaEnvelope,
-} from "react-icons/fa"; // For social media icons
+} from "react-icons/fa";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import {
@@ -13,10 +13,10 @@ import {
   FaNodeJs,
   FaDatabase,
   FaJs,
-  FaHtml5,
-  FaCss3Alt,
   FaGitAlt,
-} from "react-icons/fa"; 
+} from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { TbBrain } from "react-icons/tb";
 import Faisal from "../assets/Faisal.jpeg";
 import SyedFaisal from "../assets/Syed Faisal.pdf";
 const LandingPage = () => {
@@ -27,44 +27,43 @@ const LandingPage = () => {
 
       {/* Profile Section */}
       <div className="flex items-center justify-center py-10 px-2 md:px-16 bg-gray-900 text-white">
-        <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto space-y-6 sm:space-y-0">
-          {/* Profile Section */}
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            {/* Profile Image */}
-            <div className="w-60 h-80 sm:w-48 sm:h-48 rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
-              <img
-                src={Faisal}
-                alt="Syed Faisal Abdul Rahman Zulfequar"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            {/* Text and Resume Button */}
-            <div className="text-center sm:text-left animate-slideInRight">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white">
-                Syed Faisal Abdul Rahman Zulfequar
-              </h1>
-              <p className="text-xl sm:text-2xl mt-2 text-gray-300">
-                Full Stack Developer | 10+ Projects | 25+ Languages | 2+ Years
-                Experience
-              </p>
+  <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto space-y-6 sm:space-y-0">
+    {/* Profile Section */}
+    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 w-full">
+      {/* Profile Image */}
+      <div className="w-60 h-80 sm:w-48 sm:h-48 lg:w-[20%] lg:h-[30%] rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
+        <img
+          src={Faisal}
+          alt="Syed Faisal Abdul Rahman Zulfequar"
+          className="w-full h-[40vh] object-cover rounded-lg"
+        />
+      </div>
 
-              {/* Resume Button */}
-              {/* Resume Button */}
-              <div className="flex justify-center mt-4">
-                <a
-                  href={SyedFaisal}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
-                >
-                  View Resume
-                </a>
-              </div>
+      {/* Text and Resume Button */}
+      <div className="text-center sm:text-left animate-slideInRight lg:w-[70%]">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white">
+          Syed Faisal Abdul Rahman Zulfequar
+        </h1>
+        <p className="text-xl sm:text-2xl mt-2 text-gray-300">
+          Full Stack Developer | RAG Application Developer | 10+ Projects | 25+ Technologies | 2+ Years Experience
+        </p>
 
-            </div>
-          </div>
+        {/* Resume Button */}
+        <div className="flex justify-center sm:justify-start mt-4">
+          <a
+            href={SyedFaisal}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+          >
+            View Resume
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
       {/* About Me Section */}
       <div className="text-center py-10 px-4 bg-gray-800 text-white animate-on-scroll project-fade">
         <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400">
@@ -75,9 +74,13 @@ const LandingPage = () => {
           <span className="text-white font-semibold">
             Syed Faisal Abdul Rahman Zulfequar
           </span>
-          , a dedicated{" "}
+          , a passionate{" "}
           <span className="text-white font-semibold">Full Stack Developer</span>{" "}
-          and Computer Science student at{" "}
+          and{" "}
+          <span className="text-white font-semibold">
+            Computer Science Graduate
+          </span>{" "}
+          from{" "}
           <span className="text-white font-semibold">
             Kishinchand Chellaram College, Mumbai
           </span>{" "}
@@ -86,20 +89,39 @@ const LandingPage = () => {
           <br />
           <br />
           Skilled in the{" "}
-          <span className="text-white font-semibold">MERN stack</span> and over{" "}
-          <span className="text-white font-semibold">25 technologies</span> like
-          TypeScript, Next.js, and Docker, I’ve built scalable apps such as{" "}
-          <span className="text-white font-semibold">ChefGenie</span>, an
-          AI-powered recipe tool, a robust{" "}
-          <span className="text-white font-semibold">e-commerce site</span>, and
-          a{" "}
+          <span className="text-white font-semibold">Full stack development </span> and over{" "}
+          <span className="text-white font-semibold">25 technologies</span> like{" "}
+          <span className="text-white font-semibold">
+            TypeScript, Next.js, Docker
+          </span>
+          , and more — I’ve built scalable apps such as{" "}
+          <span className="text-white font-semibold">ChefGenie</span> (an
+          AI-powered recipe generator), a robust{" "}
+          <span className="text-white font-semibold">e-commerce platform</span>,
+          and{" "}
           <span className="text-white font-semibold">
             video progress tracker
           </span>
           .
           <br />
-          <br />I love creating user-friendly solutions by combining clean UI
-          with solid backend logic. Beyond tech, I enjoy{" "}
+          <br />
+          I’m also a{" "}
+          <span className="text-white font-semibold">
+            RAG Developer
+          </span> and{" "}
+          <span className="text-white font-semibold">GenAI Enthusiast</span> —
+          working with advanced AI tools and frameworks like{" "}
+          <span className="text-white font-semibold">
+            LangGraph, LangChain, and Vector DBs
+          </span>
+          . Projects like{" "}
+          <span className="text-white font-semibold">CricAIlytics</span>,{" "}
+          <span className="text-white font-semibold">ChefGenie</span>, and{" "}
+          <span className="text-white font-semibold">PTAI</span> reflect my
+          expertise in merging AI with full stack development.
+          <br />
+          <br />I love building clean UIs with strong backend logic. Outside of
+          tech, I enjoy{" "}
           <span className="text-white font-semibold">
             cricket, football, and tennis
           </span>{" "}
@@ -107,10 +129,11 @@ const LandingPage = () => {
           <span className="text-white font-semibold">
             AI, Web Development, and DevOps
           </span>
-          .<br />
+          .
           <br />
-          Open to internships and collaborations — let’s build something
-          impactful!
+          <br />
+          Open to internships, Jobs also FreeLance and collaborations — let’s
+          build something impactful!
         </p>
       </div>
 
@@ -202,19 +225,19 @@ const LandingPage = () => {
             <p className="mt-2 text-sm">JavaScript</p>
           </div>
 
+          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
+            <SiTypescript className="text-4xl text-blue-400" />
+            <p className="mt-2 text-sm">TypeScript</p>
+          </div>
+
           <div className="flex flex-col items-center">
             <FaDatabase className="text-4xl text-green-700" />
             <p className="mt-2 text-sm">MongoDB</p>
           </div>
 
-          <div className="flex flex-col items-center">
-            <FaHtml5 className="text-4xl text-red-500" />
-            <p className="mt-2 text-sm">HTML5</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <FaCss3Alt className="text-4xl text-blue-600" />
-            <p className="mt-2 text-sm">CSS3</p>
+          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
+            <TbBrain className="text-4xl text-pink-400" />
+            <p className="mt-2 text-sm">GenAI</p>
           </div>
 
           <div className="flex flex-col items-center">
