@@ -6,16 +6,12 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import chefgenieImg from "../assets/chefgenie.png";
 import vptImg from "../assets/vpt.png";
-import todImg from "../assets/tod.png";
-import socialmediaImg from "../assets/socialmedia.png";
 import restreview from "../assets/restreview.png";
 import fastpiks from "../assets/fastpiks.png";
 import mystrymessages from "../assets/mystrymessages.png";
 import ecommerce from "../assets/ecommerce.png";
 import videotube from "../assets/videotube.png";
 import ptai from "../assets/ptai.png";
-import resturant from "../assets/resturant.png";
-import counter from "../assets/counter.png";
 import cricailytics from "../assets/cricailytics.png";
 import officeflow from "../assets/officeflow.png";
 import prodview from "../assets/prodview.png";
@@ -132,34 +128,6 @@ const projects = [
     desc: "Simple shopping cart.",
     fullDesc:
       "This React-based e-commerce frontend allows users to browse fashion items, manage their cart, and calculate prices dynamically. It demonstrates a clean UI with intuitive item filtering and cart handling logic.",
-  },
-  {
-    name: "Restaurant Website",
-    image: resturant,
-    desc: "Responsive food site.",
-    fullDesc:
-      "A responsive and modern food ordering site with a visually rich UI. It includes user login, menu browsing, dynamic cart features, and is fully optimized for mobile and desktop screens.",
-  },
-  {
-    name: "Simple Social-Media",
-    image: socialmediaImg,
-    desc: "Basic social media site.",
-    fullDesc:
-      "A minimal social media application built with React and Firebase. Users can sign up, create profiles, post content, follow/unfollow others, and interact in real-time via Firebase’s live database.",
-  },
-  {
-    name: "Todo App",
-    image: todImg,
-    desc: "Task manager app.",
-    fullDesc:
-      "This advanced Todo App helps users manage tasks with priorities, categories, and due dates. Built with React, it includes features like filtering, status toggling, and localStorage-based persistence.",
-  },
-  {
-    name: "Simple Counter",
-    image: counter,
-    desc: "Basic counter app.",
-    fullDesc:
-      "A beginner-friendly counter app made with React. It features increment, decrement, and reset functions, with a minimalist UI and clean component structure.",
   },
 ];
 
