@@ -104,40 +104,43 @@ const LandingPage = () => {
       </div>
 
       {/* About Me Section */}
-      <div className="flex justify-center py-2 sm:py-10 animate-on-scroll project-fade">
-        <div className="w-[95%] items-center px-2 sm:px-10 bg-gray-900 text-white text-center bg-gradient-to-r from-gray-900 to-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
+      <div className="flex justify-center py-2 sm:py-10 scroll-animate animate-on-scroll project-fade ">
+        <div className="w-[95%] items-center px-2 sm:px-10 bg-gray-900 text-white text-center bg-gradient-to-r from-gray-900 to-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-blue-500/20">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-blue-400 animate-pulse">
+            About <span className="font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Me</span>
+          </h1>
           <p className="text-lg text-gray-300 leading-relaxed space-y-4">
-            <span className="block">
+            <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2">
               I'm a passionate{" "}
-              <span className="text-blue-400 font-semibold">
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
                 Computer Science Graduate
               </span>{" "}
               from{" "}
-              <span className="text-blue-400 font-semibold">
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
                 Kishinchand Chellaram College, Mumbai
               </span>{" "}
               (2022–2025) with a stellar{" "}
-              <span className="text-blue-400 font-semibold">CGPA of 9.7</span>.
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer animate-bounce inline-block">CGPA of 9.7</span>.
             </span>
 
-            <span className="block">
+            <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2 delay-100">
               With expertise in{" "}
-              <span className="text-blue-400 font-semibold">
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
                 25+ technologies
               </span>{" "}
               including TypeScript, Next.js, Docker, LangGraph, and LangChain,
               I've crafted innovative solutions like{" "}
-              <span className="text-blue-400 font-semibold">ChefGenie</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">ChefGenie</span>{" "}
               (AI-powered recipe generator),{" "}
-              <span className="text-blue-400 font-semibold">CricAIlytics</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">CricAIlytics</span>{" "}
               (cricket analytics), and robust e-commerce platforms.
             </span>
 
-            <span className="block">
+            <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2 delay-200">
               As a{" "}
-              <span className="text-blue-400 font-semibold">RAG Developer</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">RAG Developer</span>{" "}
               and{" "}
-              <span className="text-blue-400 font-semibold">
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
                 GenAI Enthusiast
               </span>
               , I bridge the gap between cutting-edge AI and practical
@@ -145,13 +148,13 @@ const LandingPage = () => {
               by powerful technology.
             </span>
 
-            <span className="block">
+            <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2 delay-300">
               Beyond coding, I'm passionate about cricket, football, tennis, and
               staying at the forefront of AI, Web Development, and DevOps
               innovations.
             </span>
 
-            <span className="block text-center mt-6 text-xl text-blue-400 font-bold">
+            <span className="block text-center mt-6 text-xl text-blue-400 font-bold animate-pulse transform hover:scale-110 transition-transform duration-300 cursor-pointer">
               🚀 Open to Internships, Jobs, and Freelance Collaborations!
             </span>
           </p>
