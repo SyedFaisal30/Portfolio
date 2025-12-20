@@ -16,6 +16,7 @@ import cricailytics from "../assets/cricailytics.png";
 import officeflow from "../assets/officeflow.png";
 import prodview from "../assets/prodview.png";
 import fintrust from "../assets/fintrust.png";
+import scrapeboard from "../assets/scrapeboard.png";
 
 type Project = {
   name: string;
@@ -55,6 +56,15 @@ const projects = [
     live: "https://ptai.vercel.app/",
   },
   {
+    name: "Scrape-Board",
+    image: scrapeboard,
+    desc: "Dashboard for latest news oaround the world.",
+    fullDesc:
+      "Scrape-Board is a web application that aggregates the latest news from TOI sources using web scraping techniques. It provides users with a clean and organized dashboard with bookmark functionality to stay updated on current events worldwide.",
+    github: "https://github.com/SyedFaisal30/ScrapeBoard",
+    live: "https://scrapeboard.vercel.app/dashboard",
+  },
+  {
     name: "FastPiks",
     image: fastpiks,
     desc: "Next.js e-commerce platform.",
@@ -91,11 +101,11 @@ const projects = [
   },
   {
     name: "ProdView",
-    image: prodview, 
+    image: prodview,
     desc: "Product feedback & review platform.",
     fullDesc:
       "ProdView is a product feedback and review platform built with MERN stack. It allows users to browse, comment, and rate various products. Includes search, category filters, and admin control for managing products and reviews efficiently.",
-    github: "https://github.com/SyedFaisal30/ProdView", 
+    github: "https://github.com/SyedFaisal30/ProdView",
     live: "https://prod-view.vercel.app/",
   },
   {
@@ -131,38 +141,36 @@ const projects = [
   },
 ];
 
-
 const Projects = () => {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [modalData, setModalData] = useState<Project | null>(null);
 
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio === 1) {
-          entry.target.classList.add("project-visible");
-        } else {
-          entry.target.classList.remove("project-visible");
-        }
-      });
-    },
-    { threshold: 1.0 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio === 1) {
+            entry.target.classList.add("project-visible");
+          } else {
+            entry.target.classList.remove("project-visible");
+          }
+        });
+      },
+      { threshold: 1.0 }
+    );
 
-  const currentRefs = projectRefs.current;
+    const currentRefs = projectRefs.current;
 
-  currentRefs.forEach((ref) => {
-    if (ref) observer.observe(ref);
-  });
-
-  return () => {
     currentRefs.forEach((ref) => {
-      if (ref) observer.unobserve(ref);
+      if (ref) observer.observe(ref);
     });
-  };
-}, []);
 
+    return () => {
+      currentRefs.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className="bg-gray-900 min-h-screen text-white">
@@ -176,7 +184,7 @@ const Projects = () => {
             <div
               key={index}
               ref={(el) => void (projectRefs.current[index] = el)}
-              className="project-fade bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition duration-500"
+              className="project-fade bg-gray-800 p-4 rounded-xl shadow-lg hover:bg-gray-700 transition duration-500 cursor-pointer "
               onClick={() => setModalData(proj)}
             >
               <img
@@ -216,10 +224,10 @@ const Projects = () => {
       {/* Modal */}
       {modalData && (
         <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white bg-opacity-90 backdrop-blur-md text-black rounded-lg p-6 max-w-lg w-full relative">
+          <div className="bg-gray-800 bg-opacity-90 backdrop-blur-md text-white rounded-lg p-6 max-w-lg w-full relative">
             <button
               onClick={() => setModalData(null)}
-              className="absolute top-2 right-4 text-2xl font-bold text-gray-500"
+              className="absolute top-2 right-2 text-2xl font-bold text-gray-500 cursor-pointer"
             >
               &times;
             </button>

@@ -5,54 +5,98 @@ import {
   FaWhatsapp,
   FaTwitter,
   FaEnvelope,
+  FaPython,
+  FaDocker,
+  FaAws,
 } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDatabase, FaJs, FaGitAlt } from "react-icons/fa";
+import { SiFastapi, SiNextdotjs, SiRedis, SiTypescript } from "react-icons/si";
+import { TbBrain } from "react-icons/tb";
+import { FaCode, FaRocket } from "react-icons/fa6";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { FaReact, FaNodeJs, FaDatabase, FaJs, FaGitAlt } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { TbBrain } from "react-icons/tb";
 import Faisal from "../assets/Faisal.jpeg";
-import SyedFaisal from "../assets/Syed Faisal.pdf";
+import Resume from "../assets/Syed Faisal.pdf";
+
 const LandingPage = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white pt-16">
-      {/* Header Section */}
       <Header />
 
       {/* Profile Section */}
-      <div className="flex items-center justify-center py-10 px-2 md:px-16 bg-gray-900 text-white">
-        <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto space-y-6 sm:space-y-0">
-          {/* Profile Section */}
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 w-full">
-            {/* Profile Image */}
-            <div className="w-60 h-80 sm:w-48 sm:h-48 lg:w-[20%] lg:h-[30%] rounded-lg overflow-hidden bg-gray-200 animate-slideInLeft">
+      <div className="flex items-center justify-center py-10 px-4 md:px-16 bg-gray-900 text-white">
+        <div className="flex flex-col lg:flex-row items-center justify-between  mx-auto space-y-8 lg:space-y-0 lg:space-x-12">
+          {/* Profile Image with Glow Effect */}
+          <div className="relative group animate-slideInLeft">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+            <div className="relative w-72 h-96 lg:w-80 lg:h-[450px] rounded-2xl overflow-hidden bg-gray-800 shadow-2xl transform group-hover:scale-105 transition duration-500">
               <img
                 src={Faisal}
                 alt="Syed Faisal Abdul Rahman Zulfequar"
-                className="w-full h-[50vh] lg:h-[40vh] object-cover rounded-lg"
+                className="w-full h-full object-cover"
               />
             </div>
+          </div>
 
-            {/* Text and Resume Button */}
-            <div className="text-center sm:text-left animate-slideInRight lg:w-[70%]">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white">
-                Syed Faisal Abdul Rahman Zulfequar
+          {/* Text Content */}
+          <div className="text-center lg:text-left lg:w-[60%] animate-slideInRight">
+            <div className="space-y-4">
+              <h1 className="sm:text-5xl text-3xl font-bold text-white leading-tight">
+                <span className="bg-gradient-to-r text-white bg-clip-text ">
+                  Syed Faisal Abdul Rahman Zulfequar
+                </span>
               </h1>
-              <p className="text-xl sm:text-2xl mt-2 text-gray-300">
-                Full Stack Developer | RAG Application Developer | 10+ Projects
-                | 25+ Technologies | 2+ Years Experience
-              </p>
 
-              {/* Resume Button */}
-              <div className="flex justify-center sm:justify-start mt-4">
-                <a
-                  href={SyedFaisal}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
-                >
-                  View Resume
-                </a>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 text-sm lg:text-base">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-semibold shadow-lg transform hover:scale-110 transition duration-300 cursor-pointer">
+                  💻 Full Stack Developer
+                </span>
+                <span className="px-4 py-2 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full font-semibold shadow-lg transform hover:scale-110 transition duration-300 cursor-pointer">
+                  🤖 RAG Developer
+                </span>
+                <span className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full font-semibold shadow-lg transform hover:scale-110 transition duration-300 cursor-pointer">
+                  🧠 GenAI Enthusiast
+                </span>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-8">
+              <a
+                href={Resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-blue-800 transition duration-300 shadow-lg transform hover:scale-105 cursor-pointer flex items-center justify-center gap-2"
+              >
+                <span>📄 View Resume</span>
+                <span className="group-hover:translate-x-1 transition duration-300">
+                  →
+                </span>
+              </a>
+              <Link
+                to="/contact"
+                className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-purple-800 transition duration-300 shadow-lg transform hover:scale-105 cursor-pointer flex items-center justify-center gap-2"
+              >
+                <span>💬 Let's Connect</span>
+                <span className="group-hover:translate-x-1 transition duration-300">
+                  →
+                </span>
+              </Link>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-700">
+              <div className="text-center transform hover:scale-110 transition duration-300 cursor-pointer">
+                <p className="text-3xl font-bold text-blue-400">9.7</p>
+                <p className="text-sm text-gray-400">CGPA</p>
+              </div>
+              <div className="text-center transform hover:scale-110 transition duration-300 cursor-pointer">
+                <p className="text-3xl font-bold text-purple-400">25+</p>
+                <p className="text-sm text-gray-400">Technologies</p>
+              </div>
+              <div className="text-center transform hover:scale-110 transition duration-300 cursor-pointer">
+                <p className="text-3xl font-bold text-green-400">10+</p>
+                <p className="text-sm text-gray-400">Projects</p>
               </div>
             </div>
           </div>
@@ -60,135 +104,145 @@ const LandingPage = () => {
       </div>
 
       {/* About Me Section */}
-      <div className="text-center py-10 px-4 bg-gray-800 text-white animate-on-scroll project-fade">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400">
-          About Me
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 mt-4 max-w-3xl mx-auto leading-relaxed">
-          I’m{" "}
-          <span className="text-white font-semibold">
-            Syed Faisal Abdul Rahman Zulfequar
-          </span>
-          , a passionate{" "}
-          <span className="text-white font-semibold">Full Stack Developer</span>{" "}
-          and{" "}
-          <span className="text-white font-semibold">
-            Computer Science Graduate
-          </span>{" "}
-          from{" "}
-          <span className="text-white font-semibold">
-            Kishinchand Chellaram College, Mumbai
-          </span>{" "}
-          (2022–2025) with a{" "}
-          <span className="text-white font-semibold">CGPA of 9.7</span>.
-          <br />
-          <br />
-          Skilled in the{" "}
-          <span className="text-white font-semibold">
-            Full stack development{" "}
-          </span>{" "}
-          and over{" "}
-          <span className="text-white font-semibold">25 technologies</span> like{" "}
-          <span className="text-white font-semibold">
-            TypeScript, Next.js, Docker
-          </span>
-          , and more — I’ve built scalable apps such as{" "}
-          <span className="text-white font-semibold">ChefGenie</span> (an
-          AI-powered recipe generator), a robust{" "}
-          <span className="text-white font-semibold">e-commerce platform</span>,
-          and{" "}
-          <span className="text-white font-semibold">
-            video progress tracker
-          </span>
-          .
-          <br />
-          <br />
-          I’m also a{" "}
-          <span className="text-white font-semibold">
-            RAG Developer
-          </span> and{" "}
-          <span className="text-white font-semibold">GenAI Enthusiast</span> —
-          working with advanced AI tools and frameworks like{" "}
-          <span className="text-white font-semibold">
-            LangGraph, LangChain, and Vector DBs
-          </span>
-          . Projects like{" "}
-          <span className="text-white font-semibold">CricAIlytics</span>,{" "}
-          <span className="text-white font-semibold">ChefGenie</span>, and{" "}
-          <span className="text-white font-semibold">PTAI</span> reflect my
-          expertise in merging AI with full stack development.
-          <br />
-          <br />I love building clean UIs with strong backend logic. Outside of
-          tech, I enjoy{" "}
-          <span className="text-white font-semibold">
-            cricket, football, and tennis
-          </span>{" "}
-          and stay curious about{" "}
-          <span className="text-white font-semibold">
-            AI, Web Development, and DevOps
-          </span>
-          .
-          <br />
-          <br />
-          Open to internships, Jobs also FreeLance and collaborations — let’s
-          build something impactful!
-        </p>
+      <div className="flex justify-center py-2 sm:py-10 animate-on-scroll project-fade">
+        <div className="w-[95%] items-center px-2 sm:px-10 bg-gray-900 text-white text-center bg-gradient-to-r from-gray-900 to-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
+          <p className="text-lg text-gray-300 leading-relaxed space-y-4">
+            <span className="block">
+              I'm a passionate{" "}
+              <span className="text-blue-400 font-semibold">
+                Computer Science Graduate
+              </span>{" "}
+              from{" "}
+              <span className="text-blue-400 font-semibold">
+                Kishinchand Chellaram College, Mumbai
+              </span>{" "}
+              (2022–2025) with a stellar{" "}
+              <span className="text-blue-400 font-semibold">CGPA of 9.7</span>.
+            </span>
+
+            <span className="block">
+              With expertise in{" "}
+              <span className="text-blue-400 font-semibold">
+                25+ technologies
+              </span>{" "}
+              including TypeScript, Next.js, Docker, LangGraph, and LangChain,
+              I've crafted innovative solutions like{" "}
+              <span className="text-blue-400 font-semibold">ChefGenie</span>{" "}
+              (AI-powered recipe generator),{" "}
+              <span className="text-blue-400 font-semibold">CricAIlytics</span>{" "}
+              (cricket analytics), and robust e-commerce platforms.
+            </span>
+
+            <span className="block">
+              As a{" "}
+              <span className="text-blue-400 font-semibold">RAG Developer</span>{" "}
+              and{" "}
+              <span className="text-blue-400 font-semibold">
+                GenAI Enthusiast
+              </span>
+              , I bridge the gap between cutting-edge AI and practical
+              full-stack applications, creating seamless user experiences backed
+              by powerful technology.
+            </span>
+
+            <span className="block">
+              Beyond coding, I'm passionate about cricket, football, tennis, and
+              staying at the forefront of AI, Web Development, and DevOps
+              innovations.
+            </span>
+
+            <span className="block text-center mt-6 text-xl text-blue-400 font-bold">
+              🚀 Open to Internships, Jobs, and Freelance Collaborations!
+            </span>
+          </p>
+        </div>
       </div>
 
       {/* Projects Section */}
-      <div className="mt-8 space-y-6 max-w-4xl mx-auto text-lg text-gray-300 animate-on-scroll project-fade px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl text-center font-semibold text-blue-400">
-          Projects
-        </h2>
+      <div className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800 animate-on-scroll project-fade">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-blue-400 text-center mb-12">
+            Featured Projects
+          </h2>
 
-        <div className="mt-8 space-y-6 animate-on-scroll project-fade">
-          {/* ChefGenie Project */}
-          <div className="animate-on-scroll project-fade">
-            <h3 className="text-2xl font-semibold text-white">ChefGenie</h3>
-            <p>
-              ChefGenie is a dynamic recipe generation platform where users can
-              generate dishes based on available ingredients. With integration
-              to TheMealDB, users can fetch detailed recipes, explore food
-              ideas, and post their own creations. This project is built using
-              the MERN stack.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 cursor-pointer transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <TbBrain className="text-3xl text-blue-400 mr-3" />
+                <h3 className="text-2xl font-bold text-white">CricAIlytics</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                AI-powered RAG application delivering advanced cricket
+                analytics, personalized player insights, and match stats using
+                real-time data retrieval and LLM-based summarization.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-xs">
+                  RAG
+                </span>
+                <span className="px-3 py-1 bg-purple-600 rounded-full text-xs">
+                  LangChain
+                </span>
+                <span className="px-3 py-1 bg-pink-600 rounded-full text-xs">
+                  AI
+                </span>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 cursor-pointer transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <FaCode className="text-3xl text-purple-400 mr-3" />
+                <h3 className="text-2xl font-bold text-white">Scrapeboard</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Intelligent web scraping platform with real-time data
+                extraction, automated workflows, and customizable scrapers for
+                diverse data sources.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-purple-600 rounded-full text-xs">
+                  Python
+                </span>
+                <span className="px-3 py-1 bg-cyan-600 rounded-full text-xs">
+                  Automation
+                </span>
+                <span className="px-3 py-1 bg-green-600 rounded-full text-xs">
+                  Data
+                </span>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-green-500 transition duration-300 cursor-pointer transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <FaRocket className="text-3xl text-green-400 mr-3" />
+                <h3 className="text-2xl font-bold text-white">PTAI</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                AI-powered fitness app built with Next.js that delivers
+                personalized workout routines and nutrition plans based on
+                health metrics, dietary preferences, and fitness goals.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-600 rounded-full text-xs">
+                  Next.js
+                </span>
+                <span className="px-3 py-1 bg-green-600 rounded-full text-xs">
+                  AI
+                </span>
+                <span className="px-3 py-1 bg-orange-600 rounded-full text-xs">
+                  Fitness
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* E-commerce Website Project */}
-          <div className="animate-on-scroll project-fade">
-            <h3 className="text-2xl font-semibold text-white">
-              E-commerce Website
-            </h3>
-            <p>
-              This e-commerce platform provides a seamless shopping experience
-              with features such as product listings, cart management, and
-              checkout functionality. Built with Next.js, Tailwind CSS, and
-              ShadCN UI, it offers a modern, responsive design for a smooth user
-              interface.
-            </p>
+          <div className="text-center mt-12">
+            <Link to="/projects">
+              <button className="px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition duration-300 cursor-pointer shadow-lg transform hover:scale-105">
+                View All Projects →
+              </button>
+            </Link>
           </div>
-
-          {/* Video Progress Tracker (VPT) Project */}
-          <div className="animate-on-scroll project-fade">
-            <h3 className="text-2xl font-semibold text-white">
-              Video Progress Tracker (VPT)
-            </h3>
-            <p>
-              VPT is a video progress tracking web app that allows users to
-              track the progress of multiple videos on a single page. It
-              features a modular design and integrates individual video
-              progress, saving user data for a more personalized experience.
-              Developed with the MERN stack.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-10 mb-10 text-center">
-          <Link to="/projects">
-            <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
-              View All Projects
-            </button>
-          </Link>
         </div>
       </div>
 
@@ -207,54 +261,82 @@ const LandingPage = () => {
         </p>
 
         <div className="flex flex-wrap justify-center mt-8 gap-8 animate-on-scroll project-fade">
-          {/* Skill with Icon */}
-          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
-            <FaReact className="text-4xl text-blue-500" />
-            <p className="mt-2 text-sm">React</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <FaNodeJs className="text-4xl text-green-500" />
-            <p className="mt-2 text-sm">Node.js</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <FaJs className="text-4xl text-yellow-500" />
-            <p className="mt-2 text-sm">JavaScript</p>
-          </div>
-
-          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
-            <SiTypescript className="text-4xl text-blue-400" />
-            <p className="mt-2 text-sm">TypeScript</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <FaDatabase className="text-4xl text-green-700" />
-            <p className="mt-2 text-sm">MongoDB</p>
-          </div>
-
-          <div className="flex flex-col items-center transform hover:scale-110 transition duration-300">
-            <TbBrain className="text-4xl text-pink-400" />
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <TbBrain className="text-4xl text-pink-400 group-hover:animate-bounce" />
             <p className="mt-2 text-sm">GenAI</p>
           </div>
 
-          <div className="flex flex-col items-center">
-            <FaGitAlt className="text-4xl text-orange-500" />
-            <p className="mt-2 text-sm">Git</p>
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <SiNextdotjs className="text-4xl text-white group-hover:animate-pulse" />
+            <p className="mt-2 text-sm">Next.js</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <FaReact className="text-4xl text-blue-500 group-hover:animate-spin" />
+            <p className="mt-2 text-sm">React</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <FaNodeJs className="text-4xl text-green-500 group-hover:animate-bounce" />
+            <p className="mt-2 text-sm">Node.js</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <FaPython className="text-4xl text-yellow-500 group-hover:animate-pulse" />
+            <p className="mt-2 text-sm">Python</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <SiFastapi className="text-4xl text-green-500 group-hover:animate-bounce" />
+            <p className="mt-2 text-sm">FastAPI</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <FaJs className="text-4xl text-yellow-500 group-hover:animate-pulse" />
+            <p className="mt-2 text-sm">JavaScript</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <SiTypescript className="text-4xl text-blue-400 group-hover:animate-bounce" />
+            <p className="mt-2 text-sm">TypeScript</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <FaDatabase className="text-4xl text-green-700 group-hover:animate-pulse" />
+            <p className="mt-2 text-sm">MongoDB</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <FaDocker className="text-4xl text-blue-500 group-hover:animate-spin" />
+            <p className="mt-2 text-sm">Docker</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:-rotate-3 transition duration-300 cursor-pointer group">
+            <SiRedis className="text-4xl text-red-500 group-hover:animate-bounce" />
+            <p className="mt-2 text-sm">Redis</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <FaAws className="text-4xl text-orange-500 group-hover:animate-pulse" />
+            <p className="mt-2 text-sm">AWS</p>
+          </div>
+
+          <div className="flex flex-col items-center transform hover:scale-110 hover:rotate-3 transition duration-300 cursor-pointer group">
+            <FaGitAlt className="text-4xl text-orange-500 group-hover:animate-spin" />
+            <p className="mt-2 text-sm">Git & GitHub</p>
           </div>
         </div>
 
-        {/* Button to redirect to the Skills page */}
         <div className="mt-10 text-center animate-on-scroll project-fade">
           <Link to="/skills">
-            <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 shadow-md">
+            <button className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 cursor-pointer shadow-md">
               View All Skills
             </button>
           </Link>
         </div>
       </div>
 
-      {/* Connect Section (Social Icons) */}
+      {/* Connect Section */}
       <div className="py-10 px-4 bg-gray-900 text-center animate-on-scroll project-fade">
         <h2 className="text-3xl sm:text-4xl font-semibold text-blue-400">
           Connect With Me
@@ -301,7 +383,6 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Footer Section */}
       <Footer />
     </div>
   );
