@@ -101,7 +101,7 @@ const genAITools = [
   },
   {
     name: "A2A Protocol",
-    icon: <FaHandshake  />,
+    icon: <FaHandshake />,
     note: "Agent-to-Agent communication protocol for modular AI",
   },
   {

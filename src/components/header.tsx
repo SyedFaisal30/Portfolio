@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   FaHome,
   FaProjectDiagram,
   FaCode,
   FaGraduationCap,
   FaEnvelope,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Header = () => {
   return (

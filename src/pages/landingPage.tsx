@@ -107,7 +107,10 @@ const LandingPage = () => {
       <div className="flex justify-center py-2 sm:py-10 scroll-animate animate-on-scroll project-fade ">
         <div className="w-[95%] items-center px-2 sm:px-10 bg-gray-900 text-white text-center bg-gradient-to-r from-gray-900 to-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-blue-500/20">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-blue-400 animate-pulse">
-            About <span className="font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Me</span>
+            About{" "}
+            <span className="font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Me
+            </span>
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed space-y-4">
             <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2">
@@ -120,7 +123,10 @@ const LandingPage = () => {
                 Kishinchand Chellaram College, Mumbai
               </span>{" "}
               (2022–2025) with a stellar{" "}
-              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer animate-bounce inline-block">CGPA of 9.7</span>.
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer animate-bounce inline-block">
+                CGPA of 9.7
+              </span>
+              .
             </span>
 
             <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2 delay-100">
@@ -130,15 +136,21 @@ const LandingPage = () => {
               </span>{" "}
               including TypeScript, Next.js, Docker, LangGraph, and LangChain,
               I've crafted innovative solutions like{" "}
-              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">ChefGenie</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+                ChefGenie
+              </span>{" "}
               (AI-powered recipe generator),{" "}
-              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">CricAIlytics</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+                CricAIlytics
+              </span>{" "}
               (cricket analytics), and robust e-commerce platforms.
             </span>
 
             <span className="block transform hover:scale-105 transition-transform duration-300 hover:translate-x-2 delay-200">
               As a{" "}
-              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">RAG Developer</span>{" "}
+              <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+                RAG Developer
+              </span>{" "}
               and{" "}
               <span className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
                 GenAI Enthusiast

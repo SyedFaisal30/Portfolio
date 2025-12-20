@@ -1,10 +1,9 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Updated imports
-import LandingPage from './pages/landingPage';
-import Projects from './pages/projects';
-import Skills from './pages/skills';
-import Education from './pages/education';
-import Contact from './pages/contact';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Updated imports
+import LandingPage from "./pages/landingPage";
+import Projects from "./pages/projects";
+import Skills from "./pages/skills";
+import Education from "./pages/education";
+import Contact from "./pages/contact";
 const App = () => {
   return (
     <Router>

@@ -48,40 +48,42 @@ const Education = () => {
     },
   ];
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("project-visible");
-          observer.unobserve(entry.target); // Optional: only animate once
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-    }
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("project-visible");
+            observer.unobserve(entry.target); // Optional: only animate once
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
 
-  const elements = document.querySelectorAll(".project-fade");
-  elements.forEach((el) => observer.observe(el));
+    const elements = document.querySelectorAll(".project-fade");
+    elements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="bg-gray-900 text-white font-sans pt-16">
       <Header />
 
       <div className=" px-4 sm:px-6 md:px-10 py-10 space-y-12">
-        <h2 className="text-3xl font-bold text-blue-400 text-center">🎓 Education</h2>
+        <h2 className="text-3xl font-bold text-blue-400 text-center">
+          🎓 Education
+        </h2>
 
         <div className="relative animate-on-scroll">
           {/* Vertical Line */}
           <div className="absolute  top-0 h-full w-1 bg-blue-400 transform -translate-x-1/2" />
 
           {/* Timeline Entries */}
-          <div className="space-y-16">    
+          <div className="space-y-16">
             {educationTimeline.map((entry, index) => (
               <div
                 key={index}
@@ -118,11 +120,18 @@ useEffect(() => {
 
         {/* Certifications Section */}
         <div className="mt-16 animate-on-scroll">
-          <h2 className="text-3xl font-bold text-blue-400 text-center">📜 Certifications</h2>
+          <h2 className="text-3xl font-bold text-blue-400 text-center">
+            📜 Certifications
+          </h2>
           <div className="space-y-6 mt-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="flex flex-col gap-1 text-left project-fade">
-                <h3 className="text-xl font-semibold text-blue-300">{cert.title}</h3>
+              <div
+                key={index}
+                className="flex flex-col gap-1 text-left project-fade"
+              >
+                <h3 className="text-xl font-semibold text-blue-300">
+                  {cert.title}
+                </h3>
                 <p className="text-gray-300">{cert.institution}</p>
                 <p className="text-gray-400 text-sm">{cert.year}</p>
                 <p className="text-gray-400 text-sm break-words whitespace-normal">
